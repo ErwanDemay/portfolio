@@ -1,0 +1,9 @@
+<div class="project-card">
+<img src=" {{ projet.data.image | url }}" alt="{{ projet.data.title }}" class="project-image">
+<h3>{{ projet.data.title }}</h3>
+<p>{{ projet.data.description }}</p>
+  <a href="{{ projet.data.url }}">  Voir le projet</a>
+<a href="{{ projet.data.github }}" target="_blank">
+<img src="../assets/images/github.png" alt="GitHub Logo" class="github-logo">
+</a>
+</div>

@@ -7,8 +7,8 @@ title: Projets
 
 <div class="container">
   <div class="projects">
-    {% for projet in collections.projets %}
+    {%- for projet in collections.projets %}
       {% include "project-card.njk" %}
-    {% endfor %}
+    {%- endfor %}
   </div>
 </div>

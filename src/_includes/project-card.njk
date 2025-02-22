@@ -1,9 +1,18 @@
 <div class="project-card">
-<img src=" {{ projet.data.image | url }}" alt="{{ projet.data.title }}" class="project-image">
-<h3>{{ projet.data.title }}</h3>
-<p>{{ projet.data.description }}</p>
-  <a href="{{ projet.data.url }}">  Voir le projet</a>
-<a href="{{ projet.data.github }}" target="_blank">
-<img src="../assets/images/github.png" alt="GitHub Logo" class="github-logo">
-</a>
+  <img src="{{ projet.data.image | url }}" alt="{{ projet.data.title }}" class="project-image">
+  <h3>{{ projet.data.title }}</h3>
+  <p>{{ projet.data.description }}</p>
+  <div class="project-links">
+    <div class="left-links">
+      <a href="{{ projet.data.url }}" class="btn btn-primary" target="_blank">Voir le projet</a>
+      <a href="{{ projet.data.github }}" target="_blank" class="github-link">
+        <img src="../assets/images/github.png" alt="GitHub Logo" class="github-logo">
+      </a>
+    </div>
+    <div class="stack-images">
+      {% for image in projet.data.stack %}
+        <img src="{{ image }}" alt="Stack Image" class="stack-image">
+      {% endfor %}
+    </div>
+  </div>
 </div>

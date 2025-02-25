@@ -1,7 +1,43 @@
 /* ==================== */
+/* FONTS */
+/* ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+/* ==================== */
 /* Reset CSS */
 /* ==================== */
-*, *::before, *::after { box-sizing: border-box; } body { line-height: 1.45; -webkit-font-smoothing: antialiased; } img, picture, video, canvas, svg { display: block; height: auto; max-width: 100%; } input, button, textarea, select { font: inherit; margin: 0; } iframe { border: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
 
 /* ==================== */
 /* Body */
@@ -13,7 +49,7 @@ body {
   background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
   background-attachment: fixed;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif; /* Police par défaut pour les paragraphes */
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   text-align: center;
@@ -88,6 +124,7 @@ nav ul li a,
   text-align: center;
   padding: 0.875rem 1rem;
   font-size: 1rem;
+  font-family: 'Inter', sans-serif; /* Police pour les liens de la navbar */
   text-decoration: none;
 }
 
@@ -111,6 +148,7 @@ nav ul li .dropdown-content a {
   padding: 0.75rem 1rem;
   display: block;
   text-align: left;
+  font-family: 'Inter', sans-serif; /* Police pour les dropdown */
 }
 
 nav ul li .dropdown-content a:hover {
@@ -145,6 +183,7 @@ footer {
 footer p {
   margin: 0;
   font-size: 1rem;
+  font-family: 'Roboto', sans-serif; /* Police pour les paragraphes du footer */
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -176,7 +215,8 @@ footer p {
   display: inline-block;
   padding: 12px 24px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500; /* Graisse moyenne pour les boutons */
+  font-family: 'Poppins', sans-serif; /* Police pour les boutons */
   color: white;
   background: linear-gradient(135deg, #4a6cf7, #1a1a2e);
   border: none;
@@ -243,11 +283,14 @@ footer p {
 .project-info h3 {
   margin: 0 0 10px;
   font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif; /* Police pour les titres des cartes */
+  font-weight: 600; /* Graisse semi-gras pour les titres */
 }
 
 .project-info p {
   margin: 0;
   font-size: 1rem;
+  font-family: 'Roboto', sans-serif; /* Police pour les paragraphes des cartes */
 }
 
 .project-links {
@@ -322,6 +365,7 @@ footer p {
 .tech-card p {
   margin-top: 10px;
   font-size: 1rem;
+  font-family: 'Roboto', sans-serif; /* Police pour les textes des cartes tech */
   color: #333;
   text-align: center;
 }
@@ -344,26 +388,59 @@ footer p {
   }
 }
 
-.hero-title {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideIn 0.5s ease-out 0.3s forwards;
+
+.header {
+  text-align: left; /* Aligne le contenu à gauche */
 }
+
+
 
 .hero-subtitle {
   opacity: 0;
   transform: translateY(20px);
+  text-align: left;
+  font-family: 'Inter', sans-serif; /* Police pour les sous-titres hero */
+  font-size: 1.2rem;
+  font-weight: 500; /* Graisse moyenne pour les sous-titres hero */
   animation: slideIn 0.5s ease-out 0.5s forwards;
+  max-width: 700px;
+  margin-right:auto;
+  margin-top: 5rem;
 }
+
+.hero-title {
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: left;
+  font-family: 'Poppins', sans-serif; /* Police pour les titres hero */
+  font-size: 1.5rem;
+  font-weight: 600; /* Graisse semi-gras pour les titres hero */
+  animation: slideIn 0.5s ease-out 0.3s forwards;
+}
+
+.hero-title-2 {
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: left;
+  font-family: 'Poppins', sans-serif; /* Police pour les titres hero */
+  font-size: 2rem;
+  font-weight: 600; /* Graisse semi-gras pour les titres hero */
+  animation: slideIn 0.5s ease-out 0.3s forwards;
+}
+
 
 .hero-button {
   opacity: 0;
   transform: translateY(20px);
+  font-family: 'Poppins', sans-serif; /* Police pour les boutons hero */
+  font-weight: 500; /* Graisse moyenne pour les boutons hero */
+  margin-top: 3.5rem;
   animation: slideIn 0.5s ease-out 0.7s forwards;
+  
 }
 
 /* ==================== */
-/* Media Queries / Responsive */ 
+/* Media Queries / Responsive */
 /* ==================== */
 @media (max-width: 768px) {
   .navbar {
